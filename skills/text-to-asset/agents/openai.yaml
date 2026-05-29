@@ -1,0 +1,4 @@
+interface:
+  display_name: "Text to Asset"
+  short_description: "Turn text into reusable judgment"
+  default_prompt: "Use -to-asset to analyze this text into evidence-bounded judgment, action, and asset guidance."

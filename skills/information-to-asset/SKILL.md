@@ -36,7 +36,7 @@ First classify the source and route evidence collection:
 | Audio or voice | Use `audio-transcribe` or speech-to-text first, then analyze the transcript. |
 | AI trend, GitHub project, frontier signal | Use `ai-frontier-radar` for current evidence, then synthesize here. |
 | Webpage that must be inspected or clicked | Use browser/browser-use capability, then synthesize here. |
-| Article, WeChat post, webpage text, transcript | Analyze directly from opened text evidence. |
+| Article, WeChat post, webpage text, transcript | Use `text-to-asset` once the text evidence is available. |
 | PDF, DOCX, PPTX, spreadsheet | Use the relevant document/presentation/spreadsheet capability when extraction or editing is needed. |
 | Local vault or knowledge base | Read its current entrypoint, index, or routing file before judging. |
 | Raw idea from the user | No external evidence unless claims depend on current facts; clarify the idea through usefulness, value migration, and next action. |

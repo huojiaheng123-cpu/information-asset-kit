@@ -1,7 +1,7 @@
 {
   "name": "information-asset-kit",
   "version": "0.1.0",
-  "description": "A Codex skill bundle for routing videos, audio, AI trends, GitHub projects, articles, documents, links, screenshots, transcripts, and raw ideas into evidence-bounded judgment, action, and reusable assets.",
+  "description": "A Codex skill bundle for routing videos, audio, AI trends, GitHub projects, articles, WeChat posts, documents, links, screenshots, transcripts, and raw ideas into evidence-bounded judgment, action, and reusable assets.",
   "author": {
     "name": "huojiaheng123-cpu",
     "url": "https://github.com/huojiaheng123-cpu"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Information Asset Kit",
     "shortDescription": "Turn inputs into judgment and assets.",
-    "longDescription": "Information Asset Kit bundles a routing skill with video analysis, audio transcription, and AI frontier radar skills. Use it to decide what evidence an input needs, call the right lower skill, and turn information into reusable judgment, actions, SOPs, prompts, skills, scripts, notes, or project experiments.",
+    "longDescription": "Information Asset Kit bundles a routing skill with text analysis, video analysis, audio transcription, and AI frontier radar skills. Use it to decide what evidence an input needs, call the right lower skill, and turn information into reusable judgment, actions, SOPs, prompts, skills, scripts, notes, or project experiments.",
     "developerName": "huojiaheng123-cpu",
     "category": "Productivity",
     "capabilities": [
