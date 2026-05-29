@@ -92,6 +92,20 @@ What can the user still contribute?
 
 This is the main worldview layer. Do not reduce it to a tool recommendation.
 
+## Intent Layer
+
+Do not analyze every text with the same structure. After evidence is available, identify the user's intent:
+
+```text
+Summary: what the text says.
+Judgment: whether it is true, useful, or worth attention.
+Worldview / trend: what changes in capability, work, roles, industry, or leverage.
+Action: what the user should try next.
+Asset: whether this should become a note, SOP, prompt, skill, script, or project.
+```
+
+Use the worldview/trend structure only when the user asks for inspiration, trend sense, "open my eyes", AI industry meaning, role shifts, or capability migration. Otherwise use the lighter relevant shape.
+
 ## Asset Decision
 
 Choose one:
@@ -132,6 +146,19 @@ If writing to a vault, update the closest existing note before creating a new on
 下一步行动：
 沉淀建议：
 ```
+
+**Worldview / trend text**
+
+```text
+文章本身：
+外部核验：
+趋势判断：
+对用户意味着什么：
+下一步小实验：
+是否沉淀：
+```
+
+Use this for AI trends, new roles, industry shifts, creator/developer experiences, and articles meant to broaden judgment. Do not reduce the answer to "learn this job/tool"; translate it into what capability becomes cheaper, what becomes valuable, and what the user can test next.
 
 **Asset update proposal**
 

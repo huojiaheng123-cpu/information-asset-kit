@@ -130,6 +130,21 @@ What can the user still contribute?
 
 This is the world-model layer. The goal is not to chase tools; it is to see where human value moves when AI lowers the cost of a capability.
 
+## Intent Layer
+
+Do not choose the output shape only from the source type. After evidence is available, identify the user's intent:
+
+```text
+Summary: user wants to know what the input says.
+Judgment: user wants to know whether it is true, useful, or worth attention.
+Worldview / trend: user wants inspiration, horizon expansion, capability migration, or industry meaning.
+Action: user wants to know what to do next.
+Asset: user wants to decide whether and where to sediment it.
+Project: user wants a concrete experiment or implementation path.
+```
+
+The same source can need different outputs. A WeChat article can be a quick summary, a fact-check, a worldview signal, or an action plan. Do not force every input into the worldview/trend structure.
+
 ## Asset Decision
 
 End by choosing one path:
@@ -149,7 +164,7 @@ Do not write files by default. If the user asks to sediment, first look for the 
 
 ## Output Modes
 
-Choose the lightest useful shape:
+Choose the lightest useful shape based on intent:
 
 **Quick take**
 
@@ -172,6 +187,21 @@ Choose the lightest useful shape:
 下一步动作：
 沉淀建议：
 ```
+
+**Worldview / trend analysis**
+
+Use this when the user wants inspiration, trend sense, AI industry meaning, role/career shifts, or to "open my eyes":
+
+```text
+文章本身：
+外部核验：
+趋势判断：
+对用户意味着什么：
+下一步小实验：
+是否沉淀：
+```
+
+The key move is to turn the input into a capability-path judgment, not a job-title chase or tool recommendation.
 
 **Asset update proposal**
 
