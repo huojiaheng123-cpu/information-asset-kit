@@ -67,6 +67,19 @@ Do not keep extracting evidence indefinitely. For hard-to-access links such as W
 
 Completeness matters, but a visible evidence boundary is better than an invisible loop.
 
+## Verification Budget
+
+When article text is incomplete, do not let fact-checking become an endless web investigation:
+
+- For worldview, inspiration, trend, or "open my eyes" requests, outside verification and adjacent-search are useful; keep them, but make the phase visible.
+- Separate "article analysis" from "external verification."
+- Verify only the 2-3 claims that affect the user's judgment most.
+- Prefer primary sources for current factual claims.
+- Stop after enough evidence to label each key claim as supported, contradicted, or unverified.
+- Do not chase every name, keyword, or related news item unless the user asks for a research brief.
+
+If verification expands beyond the article, say that the task has shifted from content analysis to outside research.
+
 ## Evidence Boundary
 
 Never turn guesses into facts. Always know which layer you are using:

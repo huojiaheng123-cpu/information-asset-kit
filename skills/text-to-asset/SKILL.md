@@ -42,6 +42,8 @@ If only HTML, a preview, or partial `js_content` is available, say so before ana
 
 Do not wait for perfect extraction forever. If the source text is incomplete after reasonable extraction attempts, analyze only what is actually available and mark the result as partial.
 
+If outside verification is needed, limit it to the few claims that change the user's decision. For inspiration or trend reading, adjacent-search is welcome, but label it as outside research and summarize progress before going deeper.
+
 Do not treat the text as verified fact. Separate:
 
 ```text
