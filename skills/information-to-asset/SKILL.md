@@ -55,6 +55,18 @@ For WeChat public-account links, first try to obtain real article text before an
 
 Do not analyze only the link title, preview card, or URL slug as if the full article was read.
 
+## Stop Conditions
+
+Do not keep extracting evidence indefinitely. For hard-to-access links such as WeChat articles:
+
+- After 2 browser/HTTP attempts and 1 decoding retry, stop and report the evidence state.
+- If title, account, date, and usable `js_content` text are available, move to analysis.
+- If only partial text is available, analyze the available part with a clear completeness warning.
+- If no real article text is available, ask for pasted text or permission to continue trying a specific method.
+- For long extraction steps, give a brief progress update instead of silently working.
+
+Completeness matters, but a visible evidence boundary is better than an invisible loop.
+
 ## Evidence Boundary
 
 Never turn guesses into facts. Always know which layer you are using:

@@ -40,6 +40,8 @@ Completeness:
 
 If only HTML, a preview, or partial `js_content` is available, say so before analysis.
 
+Do not wait for perfect extraction forever. If the source text is incomplete after reasonable extraction attempts, analyze only what is actually available and mark the result as partial.
+
 Do not treat the text as verified fact. Separate:
 
 ```text
