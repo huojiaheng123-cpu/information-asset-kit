@@ -27,6 +27,19 @@ Text actually available:
 Missing context:
 ```
 
+For WeChat public-account articles, mark which extraction layer succeeded:
+
+```text
+Browser page:
+Command-line HTML:
+js_content正文:
+Title / account / publish time:
+Encoding status:
+Completeness:
+```
+
+If only HTML, a preview, or partial `js_content` is available, say so before analysis.
+
 Do not treat the text as verified fact. Separate:
 
 ```text

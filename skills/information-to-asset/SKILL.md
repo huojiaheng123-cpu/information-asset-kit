@@ -43,6 +43,18 @@ First classify the source and route evidence collection:
 
 Lower skills collect or transform evidence. This skill decides what the evidence means for the user.
 
+## Link Evidence Collection
+
+For WeChat public-account links, first try to obtain real article text before analysis:
+
+1. Try browser access.
+2. If browser access fails or returns an empty/blocked page, retry with command-line HTTP and a normal browser User-Agent.
+3. Check whether the HTML is complete enough, and extract title, account name, publish time, and `js_content` when present.
+4. If Chinese text is garbled, retry decoding as UTF-8 from raw bytes before concluding the article is unavailable.
+5. If only partial text is available, continue with `text-to-asset` but state the missing part explicitly.
+
+Do not analyze only the link title, preview card, or URL slug as if the full article was read.
+
 ## Evidence Boundary
 
 Never turn guesses into facts. Always know which layer you are using:
