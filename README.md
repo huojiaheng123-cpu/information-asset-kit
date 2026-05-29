@@ -1,152 +1,219 @@
 # Information Asset Kit
 
-Information Asset Kit is a Codex plugin that turns messy inputs into evidence-bounded judgment, next actions, and reusable assets.
+一个用于 Codex 的信息分析与资产化插件。
 
-It is designed for people who do not only want summaries. It helps decide:
+它不是普通摘要工具。它的目标是把文章、视频、音频、GitHub 项目、AI 趋势、网页链接、截图、转录稿和原始想法，转成有证据边界的判断、下一步行动和可复用资产。
 
-- What evidence is actually available?
-- Is the input useful, questionable, or just inspiring?
-- What changes if this capability or trend matures?
-- What should someone try next?
-- Should this become a note, SOP, prompt, skill, script, or project experiment?
+## 它解决什么问题
 
-## Included Skills
+很多 AI 分析会停在这一步：
 
-| Skill | Use For |
+```text
+这篇文章/这个视频讲了什么？
+```
+
+但真正有用的问题通常是：
+
+```text
+我实际看到了什么证据？
+哪些是事实，哪些是观点、预测或营销？
+它到底有没有用？
+如果这个趋势成立，什么能力会变便宜？
+什么会变得更值钱？
+下一步能做什么小实验？
+这东西值得沉淀成笔记、SOP、Prompt、Skill、脚本或项目吗？
+```
+
+Information Asset Kit 就是为这类问题准备的。
+
+## 包含的 Skill
+
+| Skill | 用途 |
 | --- | --- |
-| `information-to-asset` | Upper router. Classifies the input, chooses the evidence path, identifies user intent, and synthesizes meaning, action, and asset routing. |
-| `text-to-asset` | Articles, WeChat posts, newsletters, essays, transcripts, copied text, extracted PDF text, and long-form notes. |
-| `watch-video-skill` | Local videos, web videos, short videos, course clips, screen recordings, and video links. |
-| `audio-transcribe` | Audio/video transcription before analysis. |
-| `ai-frontier-radar` | AI trends, GitHub projects, frontier signals, tools, and fast-moving ecosystem changes. |
+| `information-to-asset` | 总入口。判断输入类型、选择证据路径、识别用户意图，并综合成判断、行动和资产建议。 |
+| `text-to-asset` | 分析文章、公众号、网页长文、Newsletter、论坛帖、转录稿、复制文本和已提取的 PDF 文本。 |
+| `watch-video-skill` | 分析本地视频、网页视频、短视频、课程片段、录屏和视频链接。 |
+| `audio-transcribe` | 将音频或视频先转写成文字，再进入分析。 |
+| `ai-frontier-radar` | 分析 AI 趋势、GitHub 项目、前沿信号、工具变化和生态变化。 |
 
-## Core Workflow
-
-```text
-input -> evidence -> meaning -> usefulness -> value migration -> action -> asset decision
-```
-
-The plugin first asks what kind of input it is, then what the requester wants from it:
+## 核心工作流
 
 ```text
-Summary: what does it say?
-Judgment: is it true, useful, or worth attention?
-Worldview / trend: what capability, role, workflow, or market shift does it reveal?
-Action: what should be tried next?
-Asset: should it become a reusable note, SOP, prompt, skill, script, or project?
-Project: can it become a concrete experiment?
+输入 -> 证据 -> 含义 -> 有用性 -> 价值迁移 -> 行动 -> 资产判断
 ```
 
-## Why This Is Different From a Summary Tool
+它会先判断两件事：
 
-Most analysis stops at "what it says." This plugin pushes one layer further:
+1. 这是什么输入？
+2. 使用者这次到底想要什么？
 
-- It separates facts, opinions, predictions, and marketing.
-- It states what was actually seen, read, extracted, or inferred.
-- It can verify the few external claims that matter most.
-- It turns trends into value-migration questions: what gets cheaper, what becomes more valuable, and what humans or teams should still contribute.
-- It avoids saving everything as a permanent note.
-
-## Context Adaptation
-
-The public version does not assume one person's private goals, business, or memory system.
-
-If no context is available, it analyzes from a general reader, operator, creator, learner, or team perspective. If context is available, it adapts the judgment to that context while keeping evidence and inference separate.
-
-Generic does not mean weak: the output should still identify who the input matters for, what changes, what can be tested, and whether it deserves to become an asset.
-
-## Example Prompts
+意图层大概分为：
 
 ```text
-Analyze this article and tell me whether it is actually useful.
+Summary：想知道它说了什么
+Judgment：想判断真假、有用没用、值不值得关注
+Worldview / trend：想开眼界、看趋势、看能力迁移
+Action：想知道下一步怎么做
+Asset：想判断是否沉淀、沉淀到哪里
+Project：想变成实验或实现路径
+```
+
+同样是一个公众号链接，可能只是要总结，也可能要事实核验，也可能要趋势判断。这个插件不会强行把所有输入套进同一个模板。
+
+## 为什么不是普通摘要工具
+
+普通摘要工具偏向压缩信息。
+
+这个插件更关心信息能不能变成判断和行动：
+
+- 区分事实、观点、预测和营销包装。
+- 明确说明实际读到了、看到了、听到了或提取到了什么。
+- 遇到不完整内容时，不假装完整。
+- 对关键事实做有限外部核验，而不是无限搜索。
+- 对 AI 趋势、工具、项目和角色变化做价值迁移判断。
+- 判断是否值得沉淀成可复用资产，而不是把所有东西都存起来。
+
+## 上下文适配
+
+公开版不假设某一个人的私人背景、业务、目标或记忆库。
+
+如果没有上下文，它会从一般读者、创作者、运营者、学习者或团队视角分析。
+
+如果提供了上下文，它会把判断贴合到具体人、团队、项目或业务，但仍然区分：
+
+```text
+实际证据是什么？
+哪些是推断？
+哪些还没有确认？
+```
+
+通用不等于变弱。即使没有私人背景，输出也应该回答：
+
+```text
+这对谁有用？
+什么正在变化？
+什么可以被测试？
+应该做什么？
+是否值得沉淀？
+```
+
+## 示例用法
+
+```text
+分析这篇文章，告诉我它到底有没有用。
 ```
 
 ```text
-Turn this video into judgment, action, and reusable assets.
+不要只总结这个视频，把它转成判断、行动和可复用资产。
 ```
 
 ```text
-Check this GitHub AI project. What trend does it represent, and should I learn from it?
+看看这个 GitHub AI 项目，它代表什么趋势？值得学习吗？
 ```
 
 ```text
-Analyze this WeChat article. Do not just summarize it; tell me what it means and what I should test next.
+分析这个公众号链接。不要只复述内容，要告诉我它说明了什么，以及我下一步可以测试什么。
 ```
 
 ```text
-I want inspiration and trend sense from this input. Open my eyes, but keep evidence boundaries clear.
+我想从这个内容里获得趋势感和灵感，帮我打开眼界，但要把证据边界说清楚。
 ```
 
-## Output Modes
+## 常见输出模式
 
-### Quick Take
+### 快速判断
 
 ```text
-Conclusion:
-Why:
-Next step:
-Should it become an asset:
+结论：
+为什么：
+下一步：
+是否沉淀：
 ```
 
-### Deep Analysis
+### 深度分析
 
 ```text
-What it is:
-Evidence boundary:
-Core content:
-Usefulness:
-Value migration:
-Implications for the requester/team:
-Next action:
-Asset recommendation:
+它是什么：
+证据边界：
+核心内容：
+有没有用：
+价值迁移：
+对使用者/团队的启发：
+下一步动作：
+沉淀建议：
 ```
 
-### Worldview / Trend Analysis
+### 世界观 / 趋势分析
 
 ```text
-The source itself:
-External verification:
-Trend judgment:
-What it means for the requester/team:
-Small experiment:
-Should it be saved:
+文章本身：
+外部核验：
+趋势判断：
+对使用者/团队意味着什么：
+下一步小实验：
+是否沉淀：
 ```
 
-## Evidence Rules
+### 资产更新建议
 
-- Do not claim to have watched a video from a title, cover image, or webpage snippet.
-- Do not claim to have read a full article if only an excerpt or preview was available.
-- For blocked or incomplete WeChat articles, report the extraction state instead of guessing.
-- For current AI tools, GitHub projects, prices, product claims, or recent events, verify live when the claim may have changed.
-- External verification should usually focus on the 2-3 claims that most affect the judgment.
+```text
+应该更新哪里：
+为什么不是新建：
+建议补充什么：
+验证方式：
+```
 
-## Installation
+## 证据规则
 
-Install this repository as a Codex plugin from GitHub:
+- 只有标题、封面、评论或网页摘要时，不能说已经看完整个视频。
+- 只有文章预览或部分正文时，不能说已经读完整篇文章。
+- 微信公众号文章如果被拦截、正文不完整或只有图片流，要明确说明提取状态。
+- 涉及当前 AI 工具、GitHub 项目、价格、产品能力、公司动态或近期趋势时，应在需要时做实时核验。
+- 外部核验通常只查最影响判断的 2-3 个关键事实，避免无限扩展成研究报告。
+
+## 安装
+
+在 Codex 中从 GitHub 安装这个插件：
 
 ```text
 https://github.com/huojiaheng123-cpu/information-asset-kit
 ```
 
-After installing or updating, restart or reload Codex if the new skills do not appear immediately.
+安装或更新后，如果新 skill 没有立刻出现，重启或重新加载 Codex。
 
-## Optional Dependencies
+## 可选依赖
 
-Some skills can work in a degraded mode without local tools, but richer video/audio analysis may need:
+部分 skill 可以降级运行，但更完整的视频和音频分析可能需要：
 
 - FFmpeg
-- Chrome or Edge
-- Playwright / browser automation support
-- Python packages used by the bundled video/audio scripts
+- Chrome 或 Edge
+- Playwright / 浏览器自动化能力
+- 视频和音频脚本需要的 Python 依赖
 
-The video skill includes capability checks and should report missing dependencies instead of pretending full analysis is available.
+视频 skill 会先检查能力边界。缺依赖时，它应该说明降级影响，而不是假装已经完整看完。
 
-## Limitations
+## 适合谁
 
-- This plugin improves analysis discipline; it does not make inaccessible content accessible.
-- It cannot verify private, paywalled, login-only, or deleted content unless the requester provides access or text.
-- It should not be used as a substitute for professional legal, medical, or financial advice.
-- It should not write into a knowledge base by default; it should propose where something belongs unless asked to edit files.
+- 想把信息转成行动的人
+- 想从 AI 趋势里获得判断力的人
+- 想把文章、视频、项目和想法沉淀成资产的人
+- 想搭建知识库、SOP、Prompt、Skill 或小实验的人
+- 不满足于“总结一下”的创作者、运营者、产品人、研究者、开发者和团队
+
+## 不适合什么
+
+- 只想要一句话摘要
+- 不需要证据边界
+- 不想区分事实和观点
+- 希望 AI 替代专业法律、医疗、金融判断
+- 希望 AI 在没有权限的情况下读取私密、付费、登录后或已删除内容
+
+## 限制
+
+- 它不能让无法访问的内容自动变得可访问。
+- 私密、付费、登录限制或删除内容，需要使用者提供文本、文件或访问权限。
+- 它提升的是分析纪律，不保证所有判断都正确。
+- 默认不直接写入知识库；除非明确要求，它应该先建议沉淀位置。
 
 ## License
 
