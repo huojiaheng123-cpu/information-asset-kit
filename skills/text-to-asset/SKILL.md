@@ -15,6 +15,15 @@ Core path:
 text -> claim map -> evidence boundary -> usefulness -> value migration -> action -> asset decision
 ```
 
+## Context Adaptation
+
+This skill must stay useful without relying on one person's private background.
+
+- Do not assume hidden personal goals, business context, or previous conversations.
+- If no context is available, analyze from a general reader/operator/team perspective.
+- If context is available, adapt the usefulness, value migration, action, and asset decision to that context.
+- Generic does not mean weak: still identify who the text matters for, what changes, what can be tested, and what should or should not be saved.
+
 ## Evidence Boundary
 
 Start by identifying what the text actually is:
@@ -64,8 +73,8 @@ Use the lightest useful answer. Do not mechanically expand every section when th
 It says what:
 What is useful:
 What is questionable:
-What it changes in the user's thinking:
-What the user should do:
+What it changes for the reader, operator, team, or target audience:
+What the requester should do:
 Whether it should become an asset:
 ```
 
@@ -84,10 +93,10 @@ For AI, tools, workflows, industry trends, project experience, creator experienc
 ```text
 If this capability or trend matures, what becomes cheaper?
 What becomes more valuable?
-How would the user's current work change?
-What can the user amplify with it?
-What should the user reduce dependence on?
-What can the user still contribute?
+How would the requester's current work or workflow change?
+What could the requester, team, or target audience amplify with it?
+What should they reduce dependence on?
+What can people still contribute?
 ```
 
 This is the main worldview layer. Do not reduce it to a tool recommendation.
@@ -118,10 +127,10 @@ SOP / prompt: repeatable process worth reusing.
 Skill: recurring workflow that should guide future agents.
 Script / tool: deterministic repeated task worth automating.
 Project experiment: worth testing in 30 minutes to 7 days.
-Business/vault update: belongs in an existing domain memory system.
+Domain knowledge-base update: belongs in an existing project, business, or research memory system.
 ```
 
-If writing to a vault, update the closest existing note before creating a new one.
+If writing to a knowledge base or vault, update the closest existing note before creating a new one.
 
 ## Output Shapes
 
@@ -141,7 +150,7 @@ If writing to a vault, update the closest existing note before creating a new on
 来源和证据边界：
 核心主张：
 事实 / 观点 / 预测 / 营销：
-对用户的启发：
+对使用者/团队的启发：
 价值迁移：
 下一步行动：
 沉淀建议：
@@ -153,7 +162,7 @@ If writing to a vault, update the closest existing note before creating a new on
 文章本身：
 外部核验：
 趋势判断：
-对用户意味着什么：
+对使用者/团队意味着什么：
 下一步小实验：
 是否沉淀：
 ```

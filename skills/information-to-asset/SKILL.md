@@ -7,13 +7,22 @@ description: Use when the user asks to analyze, understand, evaluate, summarize,
 
 ## Core Role
 
-This is the upper routing skill for information entering the user's personal system.
+This is the upper routing skill for information entering a reusable knowledge and action system.
 
 Do not become a giant all-purpose analyst. Decide what the input is, what evidence is needed, which lower skill should handle extraction, then synthesize the result into judgment, action, and asset routing.
 
 ```text
 input -> evidence -> meaning -> usefulness -> value migration -> action -> asset decision
 ```
+
+## Context Adaptation
+
+This skill must be reusable across different people, teams, domains, and projects.
+
+- Do not assume private background, personal goals, business context, or prior conversations that are not present.
+- If no personal or organizational context is available, answer from a general operator/creator/team perspective.
+- If context is available, adapt the judgment to that context, but keep evidence and inference separate.
+- Strong generic output should still identify who the input matters for, what capability changes, what gets cheaper, what becomes valuable, and what can be tested next.
 
 ## When Not to Use
 
@@ -102,7 +111,7 @@ What is it?
 What does it say or show?
 Is it useful, and why?
 What is evidence vs opinion vs marketing?
-What does it change in the user's thinking?
+What does it change for the requester, team, or target audience?
 What should the user do next?
 Should it become an asset?
 ```
@@ -122,10 +131,10 @@ For AI tools, AI projects, industry trends, new workflows, creator/developer exp
 ```text
 If this capability matures, what becomes cheaper?
 What becomes more valuable?
-How would the user's current work change?
-What can the user amplify with it?
-What should the user reduce dependence on?
-What can the user still contribute?
+How would the requester's current work or workflow change?
+What could the requester, team, or audience amplify with it?
+What should they reduce dependence on?
+What can people still contribute?
 ```
 
 This is the world-model layer. The goal is not to chase tools; it is to see where human value moves when AI lowers the cost of a capability.
@@ -157,10 +166,10 @@ SOP / prompt: repeatable process worth reusing.
 Skill: recurring workflow that should guide future agents.
 Script / tool: deterministic repeated task worth automating.
 Project experiment: worth testing in 30 minutes to 7 days.
-Business/vault update: belongs in an existing domain memory system.
+Domain knowledge-base update: belongs in an existing project, business, or research memory system.
 ```
 
-Do not write files by default. If the user asks to sediment, first look for the closest existing note, index, protocol, or skill. Update existing assets before creating new ones.
+Do not write files by default. If the user asks to sediment the result, first look for the closest existing note, index, protocol, or skill. Update existing assets before creating new ones.
 
 ## Output Modes
 
@@ -183,7 +192,7 @@ Choose the lightest useful shape based on intent:
 核心内容：
 有没有用：
 价值迁移：
-对用户的启发：
+对使用者/团队的启发：
 下一步动作：
 沉淀建议：
 ```
@@ -196,7 +205,7 @@ Use this when the user wants inspiration, trend sense, AI industry meaning, role
 文章本身：
 外部核验：
 趋势判断：
-对用户意味着什么：
+对使用者/团队意味着什么：
 下一步小实验：
 是否沉淀：
 ```
