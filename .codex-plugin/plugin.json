@@ -1,0 +1,39 @@
+{
+  "name": "information-asset-kit",
+  "version": "0.1.0",
+  "description": "A Codex skill bundle for routing videos, audio, AI trends, GitHub projects, articles, documents, links, screenshots, transcripts, and raw ideas into evidence-bounded judgment, action, and reusable assets.",
+  "author": {
+    "name": "huojiaheng123-cpu",
+    "url": "https://github.com/huojiaheng123-cpu"
+  },
+  "repository": "https://github.com/huojiaheng123-cpu/information-asset-kit",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skills",
+    "analysis",
+    "video",
+    "transcription",
+    "ai-trends",
+    "knowledge-assets"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Information Asset Kit",
+    "shortDescription": "Turn inputs into judgment and assets.",
+    "longDescription": "Information Asset Kit bundles a routing skill with video analysis, audio transcription, and AI frontier radar skills. Use it to decide what evidence an input needs, call the right lower skill, and turn information into reusable judgment, actions, SOPs, prompts, skills, scripts, notes, or project experiments.",
+    "developerName": "huojiaheng123-cpu",
+    "category": "Productivity",
+    "capabilities": [
+      "Analyze",
+      "Route",
+      "Transcribe",
+      "Summarize"
+    ],
+    "defaultPrompt": [
+      "Analyze this and tell me what it means for me.",
+      "Turn this input into judgment, action, or an asset.",
+      "Check this AI project and explain the value migration."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Frontier Radar"
+  short_description: "Track fast-moving AI signals and information gaps."
+  default_prompt: "Use $ai-frontier-radar to brief me on the latest high-signal AI frontier developments and opportunities."

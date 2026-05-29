@@ -1,0 +1,4 @@
+interface:
+  display_name: "Information to Asset"
+  short_description: "Convert inputs into reusable assets"
+  default_prompt: "Use $information-to-asset to analyze this input and turn it into evidence-bounded judgment, action, and asset guidance."
